@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa interactivo</title>
+    {{ mapa.header }}
+</head>
+<body>
+    <div id="mapa" style="height: 500px"></div>
+
+    {{ mapa.script }}
+
+    <form method="POST" action="{{ url_for('registrar_aparcadero') }}">
+        <label for="latitud">Latitud:</label>
+        <input type="text" name="latitud" required>
+        <br>
+        <label for="longitud">Longitud:</label>
+        <input type="text" name="longitud" required>
+        <br>
+        <label for="numero_cupos">Número de cupos:</label>
+        <input type="number" name="numero_cupos" required>
+        <br>
+        <label for="horarios_atencion">Horarios de atención:</label>
+        <input type="text" name="horarios_atencion" required>
+        <br>
+        <input type="submit" value="Registrar aparcadero">
+    </form>
+</body>
+</html>
